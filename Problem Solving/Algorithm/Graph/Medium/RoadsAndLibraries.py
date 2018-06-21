@@ -18,7 +18,6 @@ for _ in range(q):
     ans=0
     """if cost of building library c_lib is less than or equall to cost of building roads
        we do not build any roads and just build libraries in each city"""
-    if c_lib<=c_road:ans=c_lib*n
     """else we iterate through all the cities which have a road beggining from them 
         if it has been visited we do not enter it 
         otherwise we put its location in queue and start our search from here
@@ -26,6 +25,7 @@ for _ in range(q):
         so we do not start a search from city cluster that have been previously visited
         the number of time we start the search is equall to no nof city clusters
         """
+    if c_lib<=c_road:ans=c_lib*n
     else:
         tmp=n-len(v)
         for j in g:
